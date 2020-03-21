@@ -16,7 +16,7 @@ use function is_file;
 /**
  * Ensure vendor libraries exist
  */
-! is_file($form_autoload = __DIR__ . '/vendor/autoload.php') and exit('Please run: <i>composer install</i> for icon plugin');
+! is_file($icon_autoload = __DIR__ . '/vendor/autoload.php') and exit('Please run: <i>composer install</i> for icon plugin');
 
 /**
  * Register The Auto Loader
@@ -27,12 +27,7 @@ use function is_file;
  * loading any of our classes later on. It feels nice to relax.
  * Register The Auto Loader
  */
-$form_loader = require_once $form_autoload;
-
-/**
- * Include shortcodes
- */
-include_once 'shortcodes/IconShortcodeExtension.php';
+$icon_loader = require_once $icon_autoload;
 
 /**
  * Include dependencies

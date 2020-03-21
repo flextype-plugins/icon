@@ -13,7 +13,7 @@ namespace Flextype;
 
 use Flextype\Component\Filesystem\Filesystem;
 
-class Icon extends Model
+class Icon extends Container
 {
     public static function icon($value)
     {
