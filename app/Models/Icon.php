@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * @link http://digital.flextype.org
+ * @link https://flextype.org
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -17,7 +17,7 @@ class Icon extends Container
 {
     public static function icon($value = null) : string
     {
-        $icon_fallback_file_path = PATH['site'] . '/plugins/' . '/icon/assets/dist/fontawesome/svgs/regular/file-alt.svg';
+        $icon_fallback_file_path = PATH['project'] . '/plugins/icon/assets/dist/fontawesome/svgs/regular/file-alt.svg';
 
         if ($value == null) {
             $icon = Filesystem::read($icon_fallback_file_path);
@@ -37,7 +37,7 @@ class Icon extends Container
 
             $icon_name = str_replace("fa-", "", $icon_parts[1]);
 
-            $icon_file_path = PATH['site'] . '/plugins/' . '/icon/assets/dist/fontawesome/svgs/' . $icon_category . '/' . $icon_name . '.svg';
+            $icon_file_path = PATH['project'] . '/plugins/icon/assets/dist/fontawesome/svgs/' . $icon_category . '/' . $icon_name . '.svg';
 
             if (Filesystem::has($icon_file_path)) {
                 $icon = Filesystem::read($icon_file_path);
