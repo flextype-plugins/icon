@@ -29,7 +29,7 @@ class IconTwigExtension extends Twig_Extension
     /**
      * Get Icon
      */
-    public function icon(string $value) : string
+    public function icon(string $value = null) : string
     {
         return Icon::icon($value);
     }

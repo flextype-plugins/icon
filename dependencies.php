@@ -12,4 +12,4 @@ declare(strict_types=1);
 namespace Flextype;
 
 // Add Icon Twig Extension
-$flextype->view->addExtension(new IconTwigExtension($flextype));
+$flextype->twig->addExtension(new IconTwigExtension($flextype));
