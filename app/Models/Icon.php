@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace Flextype;
 
 use Flextype\Component\Filesystem\Filesystem;
+use Flextype\App\Foundation\Container;
 
 class Icon extends Container
 {
