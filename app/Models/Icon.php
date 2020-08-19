@@ -12,10 +12,22 @@ declare(strict_types=1);
 namespace Flextype\Plugin\Icon\Models;
 
 use Flextype\Component\Filesystem\Filesystem;
-use Flextype\App\Foundation\Container;
 
-class Icon extends Container
+class Icon
 {
+    /**
+     * Flextype Application
+     */
+     protected $flextype;
+
+    /**
+     * __construct
+     */
+     public function __construct($flextype)
+     {
+         $this->flextype = $flextype;
+     }
+
     public static function icon($value = null) : string
     {
         $icon_fallback_file_path = PATH['project'] . '/plugins/icon/assets/dist/fontawesome/svgs/regular/file-alt.svg';
