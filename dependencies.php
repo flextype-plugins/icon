@@ -14,4 +14,4 @@ namespace Flextype\Plugin\Icon;
 use Flextype\Plugin\Icon\Twig\IconTwigExtension;
 
 // Add Icon Twig Extension
-$flextype->container('twig')->addExtension(new IconTwigExtension($flextype));
+flextype('twig')->addExtension(new IconTwigExtension());

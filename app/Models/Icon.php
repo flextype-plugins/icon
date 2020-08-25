@@ -15,17 +15,13 @@ use Flextype\Component\Filesystem\Filesystem;
 
 class Icon
 {
-    /**
-     * Flextype Application
-     */
-     protected $flextype;
 
     /**
      * __construct
      */
-     public function __construct($flextype)
+     public function __construct()
      {
-         $this->flextype = $flextype;
+
      }
 
     public static function icon($value = null) : string
