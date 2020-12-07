@@ -1,5 +1,12 @@
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/flextype-plugins/icon/compare/v1.3.0...v1.4.0) (2020-12-07)
+
+### Features
+
+* **core** update code base for new Flextype 0.9.12
+
 <a name="1.3.0"></a>
-# [1.3.0](https://github.com/flextype-plugins/form-icon/compare/v1.2.0...v1.3.0) (2020-08-25)
+# [1.3.0](https://github.com/flextype-plugins/icon/compare/v1.2.0...v1.3.0) (2020-08-25)
 
 ### Features
 
