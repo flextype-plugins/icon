@@ -4,7 +4,12 @@
 <a href="https://github.com/flextype-plugins/icon/releases"><img alt="Version" src="https://img.shields.io/github/release/flextype-plugins/icon/icon.svg?label=version&color=black"></a> <a href="https://github.com/flextype-plugins/icon"><img src="https://img.shields.io/badge/license-MIT-blue.svg?color=black" alt="License"></a> <a href="https://github.com/flextype-plugins/icon"><img src="https://img.shields.io/github/downloads/flextype-plugins/icon/total.svg?color=black" alt="Total downloads"></a> <a href="https://github.com/flextype/flextype"><img src="https://img.shields.io/badge/Flextype-0.9.15-green.svg?color=black" alt="Flextype"></a> <a href=""><img src="https://img.shields.io/discord/423097982498635778.svg?logo=discord&color=black&label=Discord%20Chat" alt="Discord"></a>
 </p>
 
-Icon plugin to present [Font Awesome](https://fontawesome.com/) icons set for Flextype.
+Icon plugin to present most popular icons sets in SVG format for Flextype.  
+
+This plugin currently contains 3 primary SVG icon sets:
+* [Font Awesome](https://fontawesome.com) - A set of 1600+ free high-quality SVG icons by Fonticons, Inc.
+* [Tabler Icons](https://tablericons.com/) - A set of 950+ free high-quality SVG icons by [Csaba Kissi](https://twitter.com/csaba_kissi)
+* [Simple Icons](https://simpleicons.org/) - A set of 1500+ free high-quality SVG icons for popular brands by [Dan Leech](https://twitter.com/bathtype)
 
 ## Dependencies
 
@@ -28,7 +33,7 @@ The following dependencies need to be installed for Icon Plugin.
 | Key | Value | Description |
 |---|---|---|
 | enabled | true | true or false to disable the plugin |
-| priority | 80 | jquery plugin priority |
+| priority | 1 | jquery plugin priority |
 
 ## Documentation
 
