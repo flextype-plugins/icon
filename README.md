@@ -38,24 +38,34 @@ The following dependencies need to be installed for Icon Plugin.
 
 Global function `icon()`
 
-```
+```php
+/**
+ * Get SVG icon from specific icons set.
+ *
+ * @param string $name Icon name.
+ * @param array  $set  Icon set.
+ *                     Valid values: tabler, fontawesome|brands, fontawesome|regular, fontawesome|solid
+ * @param string $class CSS Class.
+ *
+ * @return string
+ */
 function icon(string $name, ?string $set = 'fontawesome|solid', ?string $class = null): string
 ```
 
 ### Usage
 
-**Display icon in the twig templates:**
+**Display icon in the twig templates**
 
 ```
 {{ icon('apple', 'fontawesome|brands') }}
 ```
 
-**Display icon in the entry content:**
+**Display icon in the entry content**
 ```
 [icon name="apple" set="fontawesome|brands"]
 ```
 
-**Display icon in the php:**
+**Display icon in the php**
 
 ```
 echo icon('apple', 'fontawesome|brands');
