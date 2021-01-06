@@ -7,7 +7,8 @@
 Icon plugin to present most popular icons sets in SVG format for Flextype.  
 
 This plugin currently contains 3 primary SVG icon sets:
-* [Font Awesome](https://fontawesome.com) -  A set of 1600+ free high-quality SVG icons by Fonticons, Inc. [DEFAULT]
+* [Font Awesome](https://fontawesome.com) -  A set of 1600+ free high-quality SVG icons by [Fonticons, Inc.](https://twitter.com/fontawesome)
+* [Bootstrap Icons](https://icons.getbootstrap.com) - A set of 1200+ free high-quality SVG icons by [Bootstrap Team](https://getbootstrap.com/docs/5.0/about/team/)
 * [Tabler Icons](https://tablericons.com/) - A set of 950+ free high-quality SVG icons by [Csaba Kissi](https://twitter.com/csaba_kissi)
 
 ## Dependencies
@@ -25,7 +26,7 @@ The following dependencies need to be installed for Icon Plugin.
 
 1. Download & Install all required dependencies.
 2. Create new folder `/project/plugins/icon`
-3. Download jQuery Plugin and unzip plugin content to the folder `/project/plugins/icon`
+3. Download Icon Plugin and unzip plugin content to the folder `/project/plugins/icon`
 
 ## Settings
 
@@ -43,8 +44,12 @@ Global function `icon()`
  * Get SVG icon from specific icons set.
  *
  * @param string $name Icon name.
- * @param array  $set  Icon set.
- *                     Valid values: tabler, fontawesome|brands, fontawesome|regular, fontawesome|solid
+ * @param array  $set  Icon set:
+ *                        - tabler
+ *                        - bootstrap
+ *                        - fontawesome|brands,
+ *                        - fontawesome|regular
+ *                        - fontawesome|solid
  * @param string $class CSS Class.
  *
  * @return string
@@ -67,7 +72,7 @@ function icon(string $name, ?string $set = 'fontawesome|solid', ?string $class =
 
 **Display icon in the php**
 
-```
+```php
 echo icon('apple', 'fontawesome|brands');
 ```
 
