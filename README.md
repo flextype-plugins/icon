@@ -43,14 +43,14 @@ Global function `icon()`
 /**
  * Get SVG icon from specific icons set.
  *
- * @param string $name Icon name.
- * @param array  $set  Icon set:
- *                        - tabler
- *                        - bootstrap
- *                        - fontawesome|brands,
- *                        - fontawesome|regular
- *                        - fontawesome|solid
- * @param string $class CSS Class.
+ * @param string       $name Icon name.
+ * @param string|null  $set  Icon set:
+ *                             - tabler
+ *                             - bootstrap
+ *                             - fontawesome|brands,
+ *                             - fontawesome|regular
+ *                             - fontawesome|solid
+ * @param string|null  $class CSS Class.
  *
  * @return string
  */
