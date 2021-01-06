@@ -7,9 +7,8 @@
 Icon plugin to present most popular icons sets in SVG format for Flextype.  
 
 This plugin currently contains 3 primary SVG icon sets:
-* [Font Awesome](https://fontawesome.com) - A set of 1600+ free high-quality SVG icons by Fonticons, Inc.
+* [Font Awesome](https://fontawesome.com) -  A set of 1600+ free high-quality SVG icons by Fonticons, Inc. [DEFAULT]
 * [Tabler Icons](https://tablericons.com/) - A set of 950+ free high-quality SVG icons by [Csaba Kissi](https://twitter.com/csaba_kissi)
-* [Simple Icons](https://simpleicons.org/) - A set of 1500+ free high-quality SVG icons for popular brands by [Dan Leech](https://twitter.com/bathtype)
 
 ## Dependencies
 
@@ -37,16 +36,29 @@ The following dependencies need to be installed for Icon Plugin.
 
 ## Documentation
 
-Display icon in the twig templates:
+Global function icon()
 
 ```
-{{ icon('fab fa-apple') }}
+function icon(string $name, ?string $set = 'fontawesome|solid', ?string $class = null): string
 ```
 
-Display icon in the php:
+#### Usage
+
+**Display icon in the twig templates:**
 
 ```
-echo Icon::icon('fab fa-apple');
+{{ icon('apple', 'fontawesome|brands') }}
+```
+
+**Display icon in the entry content:**
+```
+[icon name="apple" set="fontawesome|brands"]
+```
+
+**Display icon in the php:**
+
+```
+echo icon('apple', 'fontawesome|brands');
 ```
 
 ## LICENSE
