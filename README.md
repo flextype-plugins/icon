@@ -36,13 +36,13 @@ The following dependencies need to be installed for Icon Plugin.
 
 ## Documentation
 
-Global function icon()
+Global function `icon()`
 
 ```
 function icon(string $name, ?string $set = 'fontawesome|solid', ?string $class = null): string
 ```
 
-#### Usage
+### Usage
 
 **Display icon in the twig templates:**
 
