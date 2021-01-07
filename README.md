@@ -11,31 +11,31 @@ This plugin currently contains 3 primary SVG icon sets:
 * [Bootstrap Icons](https://icons.getbootstrap.com) - A set of 1200+ free high-quality SVG icons by [Bootstrap Team](https://getbootstrap.com/docs/5.0/about/team/)
 * [Tabler Icons](https://tablericons.com/) - A set of 950+ free high-quality SVG icons by [Csaba Kissi](https://twitter.com/csaba_kissi)
 
-## Dependencies
+### Dependencies
 
 The following dependencies need to be installed for Icon Plugin.
 
-## System
+### System
 
 | Item | Version | Download |
 |---|---|---|
 | [flextype](https://github.com/flextype/flextype) | 0.9.15 | [download](https://github.com/flextype/flextype/releases) |
 | [twig](https://github.com/flextype-plugins/twig) | >=2.0.0 | [download](https://github.com/flextype-plugins/twig/releases) |
 
-## Installation
+### Installation
 
 1. Download & Install all required dependencies.
 2. Create new folder `/project/plugins/icon`
 3. Download Icon Plugin and unzip plugin content to the folder `/project/plugins/icon`
 
-## Settings
+### Settings
 
 | Key | Value | Description |
 |---|---|---|
 | enabled | true | true or false to disable the plugin |
 | priority | 1 | Icon plugin priority |
 
-## Documentation
+### Documentation
 
 Global function `icon()`
 
@@ -57,7 +57,7 @@ Global function `icon()`
 function icon(string $name, ?string $set = 'fontawesome|solid', ?string $class = null): string
 ```
 
-### Usage
+#### Usage
 
 **Display icon in the twig templates**
 
@@ -76,6 +76,6 @@ function icon(string $name, ?string $set = 'fontawesome|solid', ?string $class =
 echo icon('apple', 'fontawesome|brands');
 ```
 
-## LICENSE
+### LICENSE
 [The MIT License (MIT)](https://github.com/flextype-plugins/icon/blob/master/LICENSE.txt)
 Copyright (c) 2021 [Sergey Romanenko](https://github.com/Awilum)
