@@ -43,7 +43,7 @@ Global function `icon()`
 /**
  * Get SVG icon from specific icons set.
  *
- * @param string       $name Icon name.
+ * @param string|null  $name Icon name.
  * @param string|null  $set  Icon set:
  *                             - tabler
  *                             - bootstrap
@@ -54,7 +54,7 @@ Global function `icon()`
  *
  * @return string
  */
-function icon(string $name, ?string $set = 'fontawesome|solid', ?string $class = null): string
+function icon(?string $name = null, ?string $set = 'fontawesome|solid', ?string $class = null): string
 ```
 
 ### Usage

@@ -17,7 +17,7 @@ use Thunder\Shortcode\Shortcode\ShortcodeInterface;
 /**
  * Get SVG icon from specific icons set.
  *
- * @param string       $name Icon name.
+ * @param string|null  $name Icon name.
  * @param string|null  $set  Icon set:
  *                             - tabler
  *                             - bootstrap
@@ -28,7 +28,7 @@ use Thunder\Shortcode\Shortcode\ShortcodeInterface;
  *
  * @return string
  */
-function icon(string $name, ?string $set = 'fontawesome|solid', ?string $class = null): string
+function icon(?string $name = null, ?string $set = 'fontawesome|solid', ?string $class = null): string
 {
     switch ($set) {
         case 'tabler':
@@ -64,12 +64,12 @@ function icon(string $name, ?string $set = 'fontawesome|solid', ?string $class =
 
 // Shortcode: [icon name="apple" set="fontawesome|brands" class=""]
 flextype('parsers')->shortcode()->addHandler('icon', function (ShortcodeInterface $s) {
-    return icon($s->getParameter('name'),
+    return icon(! is_null($s->getParameter('name')) ? $s->getParameter('name') : null,
                 ! is_null($s->getParameter('set')) ? $s->getParameter('set') : null,
                 ! is_null($s->getParameter('class')) ? $s->getParameter('class') : '');
 });
 
 // Twig: {{ icon('apple', 'fontawesome|brands', '') }}
-flextype('twig')->addFunction(new TwigFunction('icon', function (string $name, ?string $set = 'fontawesome|solid', ?string $class = null) {
+flextype('twig')->addFunction(new TwigFunction('icon', function (?string $name = null, ?string $set = 'fontawesome|solid', ?string $class = null) {
     return icon($name, $set, $class);
 }, ['is_safe' => ['html']]));
