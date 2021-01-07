@@ -1,5 +1,12 @@
+<a name="2.0.1"></a>
+# [2.0.1](https://github.com/flextype-plugins/icon/compare/v2.0.0...v2.0.1) (2021-01-07)
+
+### Bug Fixes
+
+* **core** fix possible issue with null icon name.
+
 <a name="2.0.0"></a>
-# [2.0.0](https://github.com/flextype-plugins/icon/compare/v1.7.0...v2.0.0) (2021-01-03)
+# [2.0.0](https://github.com/flextype-plugins/icon/compare/v1.7.0...v2.0.0) (2021-01-07)
 
 ### Features
 
