@@ -2,8 +2,8 @@ name: Icon
 version: 2.1.0
 description: Icon plugin to present most popular icons sets in SVG format for Flextype.
 icon:
-  name: font-awesome-flag
-  set: "fontawesome|brands"
+  name: flag
+  set: bootstrap
 author:
   name: Sergey Romanenko
   email: sergey.romanenko@flextype.org
