@@ -25,10 +25,11 @@ use Thunder\Shortcode\Shortcode\ShortcodeInterface;
  *                             - fontawesome|regular
  *                             - fontawesome|solid
  * @param string|null  $class CSS Class.
+ * @param string|null  $style CSS Style.
  *
  * @return string
  */
-function icon(?string $name = null, ?string $set = 'fontawesome|solid', ?string $class = null): string
+function icon(?string $name = null, ?string $set = 'fontawesome|solid', ?string $class = null, ?string $style = null): string
 {
     switch ($set) {
         case 'tabler':
@@ -56,17 +57,18 @@ function icon(?string $name = null, ?string $set = 'fontawesome|solid', ?string 
 
     $iconSVG = filesystem()->file($iconFilePath)->exists() ? filesystem()->file($iconFilePath)->get() : $sadSmileSVG;
 
-    return ! is_null($class) ? '<span class="' . $class . '">' . $iconSVG . '</span>' : $iconSVG ;
+    return ! is_null($class) ? '<span class="' . $class . '" style="' . $style . '">' . $iconSVG . '</span>' : $iconSVG ;
 }
 
-// Shortcode: [icon name="apple" set="fontawesome|brands" class=""]
+// Shortcode: [icon name="apple" set="fontawesome|brands" class="" style=""]
 flextype('parsers')->shortcode()->addHandler('icon', function (ShortcodeInterface $s) {
     return icon(! is_null($s->getParameter('name')) ? $s->getParameter('name') : null,
                 ! is_null($s->getParameter('set')) ? $s->getParameter('set') : null,
-                ! is_null($s->getParameter('class')) ? $s->getParameter('class') : '');
+                ! is_null($s->getParameter('class')) ? $s->getParameter('class') : '',
+                ! is_null($s->getParameter('style')) ? $s->getParameter('style') : '');
 });
 
 // Twig: {{ icon('apple', 'fontawesome|brands', '') }}
-flextype('twig')->addFunction(new TwigFunction('icon', function (?string $name = null, ?string $set = 'fontawesome|solid', ?string $class = null) {
-    return icon($name, $set, $class);
+flextype('twig')->addFunction(new TwigFunction('icon', function (?string $name = null, ?string $set = 'fontawesome|solid', ?string $class = null, ?string $style = null) {
+    return icon($name, $set, $class, $style);
 }, ['is_safe' => ['html']]));
