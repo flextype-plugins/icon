@@ -68,7 +68,7 @@ flextype('parsers')->shortcode()->addHandler('icon', function (ShortcodeInterfac
                 ! is_null($s->getParameter('style')) ? $s->getParameter('style') : '');
 });
 
-// Twig: {{ icon('apple', 'fontawesome|brands', '') }}
+// Twig: {{ icon('apple', 'fontawesome|brands', '', '') }}
 flextype('twig')->addFunction(new TwigFunction('icon', function (?string $name = null, ?string $set = 'fontawesome|solid', ?string $class = null, ?string $style = null) {
     return icon($name, $set, $class, $style);
 }, ['is_safe' => ['html']]));
