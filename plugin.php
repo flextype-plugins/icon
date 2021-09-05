@@ -13,6 +13,7 @@ namespace Flextype\Plugin\Icon;
 
 use Twig\TwigFunction;
 use Thunder\Shortcode\Shortcode\ShortcodeInterface;
+use function twig;
 
 /**
  * Get SVG icon from specific icons set.
@@ -61,7 +62,7 @@ function icon(?string $name = null, ?string $set = 'fontawesome|solid', ?string 
 }
 
 // Shortcode: [icon name="apple" set="fontawesome|brands" class="" style=""]
-flextype('parsers')->shortcode()->addHandler('icon', function (ShortcodeInterface $s) {
+parsers()->shortcodes()->addHandler('icon', function (ShortcodeInterface $s) {
     return icon(! is_null($s->getParameter('name')) ? $s->getParameter('name') : null,
                 ! is_null($s->getParameter('set')) ? $s->getParameter('set') : null,
                 ! is_null($s->getParameter('class')) ? $s->getParameter('class') : '',
@@ -69,6 +70,6 @@ flextype('parsers')->shortcode()->addHandler('icon', function (ShortcodeInterfac
 });
 
 // Twig: {{ icon('apple', 'fontawesome|brands', '', '') }}
-flextype('twig')->addFunction(new TwigFunction('icon', function (?string $name = null, ?string $set = 'fontawesome|solid', ?string $class = null, ?string $style = null) {
+twig()->addFunction(new TwigFunction('icon', function (?string $name = null, ?string $set = 'fontawesome|solid', ?string $class = null, ?string $style = null) {
     return icon($name, $set, $class, $style);
 }, ['is_safe' => ['html']]));
